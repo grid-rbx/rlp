@@ -3,7 +3,7 @@
 
 Usage:
 
- 1. Download our RobloxModule [here](https://github.com/grid-rbx/rlp/blob/master/robloxLongPolling.rbxm)
+ 1. Download our RobloxModule [here](https://github.com/grid-rbx/rlp/blob/master/LongPolling.rbxm)
  2. Ensure HTTP Service is enabled as the steps below show
  3. Download the Roblox module by doing `npm i roblox-long-polling`
  4. Add it to your Node.JS code with the example
