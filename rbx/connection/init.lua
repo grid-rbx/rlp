@@ -1,5 +1,5 @@
 local HttpService = game:GetService("HttpService")
-local Base64 = require(script.Base)
+local Base64 = require(script:WaitForChild("Base"))
 Connection = {}
 Connection.__index = Connection
 
@@ -37,7 +37,7 @@ function Connection.new(url, id)
 					},
 					Body = HttpService:JSONEncode({
 						name = Base64.encode("internal_ping"),
-						data = Base64.encode("whats poppin lo gang")
+						data = Base64.encode("Internal Ping. Service is up.")
 					})
 				})
 			end)
