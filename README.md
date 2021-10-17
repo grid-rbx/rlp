@@ -1,7 +1,5 @@
-# Grid Long-Polling
+# 🔌 RLP
 *A Fork from ReAdminRBX/roblox-long-polling*
-
-If you need to use a scaled version you can view our scaled verion documentation by switching to its branch.
 
 Usage:
 
