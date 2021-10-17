@@ -9,13 +9,18 @@ Usage:
  2. Ensure HTTP Service is enabled as the steps below show
  3. Download the Roblox module by doing `npm i roblox-long-polling`
  4. Add it to your Node.JS code with the example
+ 5. Ensure you have a server running Redis that you can connect this too, if you don't you won't be able to scale and you'll need to use the nonscaled version.
 ```js
-    const  rlp = require("roblox-long-polling")
+    const  rlp = require("scalable-roblox-long-polling")
 
     const  poll = new  rlp({
 	    port:  5000, // Add this behind your IP, example: http://127.0.0.1:2004,
 	    //password: "passsword here" If you want to add a simple password, put uncomment this and add your password
-    });
+        redisConnection: {//this is very much required
+            host: "localhost",
+            port: 6379
+        }
+    }); //Usage is just like the other module, the only difference is you need redis.
     
     poll.on('connection', (connection) => {
     console.log('New connection', connection.id);// Will fire when a new connection is active, and include this IP address.
@@ -42,7 +47,8 @@ local robloxLongPolling = require(script.Parent.robloxLongPolling)
 
   
 
-local connection = robloxLongPolling.Connect("http://yourIphere:5000", "")
+local connection = robloxLongPolling.Connect("http://yourIpHere:2004", "")
+
 
 connection:on("welcome", function(message)--This is an event fired in the above example, you can change this if you want into your own events.
 print("received welcome ", message)

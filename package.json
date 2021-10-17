@@ -1,6 +1,6 @@
 {
-  "name": "roblox-long-polling",
-  "version": "2.0.3",
+  "name": "rlp",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReAdminRBX/roblox-long-polling.git"
+    "url": "git+https://github.com/grid-rbx/rlp.git"
   },
   "keywords": [
     "roblox",
@@ -19,15 +19,17 @@
     "real",
     "time"
   ],
-  "author": "Matthew W",
-  "license": "ISC",
+  "author": "Grid, Inc.",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ReAdminRBX/roblox-long-polling/issues"
+    "url": "https://github.com/grid-rbx/rlp/issues"
   },
   "dependencies": {
+    "async-redis": "^2.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
+    "redis": "^3.1.2",
     "uuid": "^8.3.2"
   },
-  "homepage": "https://github.com/ReAdminRBX/roblox-long-polling#readme"
+  "homepage": "https://github.com/grid-rbx/rlp#readme"
 }
