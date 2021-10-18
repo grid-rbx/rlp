@@ -1,3 +1,5 @@
+> This repository has opted-in to Hacktoberfest!
+
 # 🔌 RLP
 *Forked from ReAdminRBX/roblox-long-polling*
 
