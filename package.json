@@ -1,35 +1,35 @@
 {
-  "name": "@grid-rbx/rlp",
-  "version": "1.0.0",
-  "description": "Long-Polling library for Roblox",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/grid-rbx/rlp.git"
-  },
-  "keywords": [
-    "roblox",
-    "http",
-    "long",
-    "polling",
-    "realtime",
-    "real",
-    "time"
-  ],
-  "author": "Grid, Inc.",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/grid-rbx/rlp/issues"
-  },
-  "dependencies": {
-    "async-redis": "^2.0.0",
-    "express": "^4.17.1",
-    "helmet": "^4.6.0",
-    "redis": "^3.1.2",
-    "uuid": "^8.3.2"
-  },
-  "homepage": "https://github.com/grid-rbx/rlp#readme"
+    "name": "@grid-rbx/rlp",
+    "version": "1.0.1",
+    "description": "Long-Polling library for Roblox",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/grid-rbx/rlp.git"
+    },
+    "keywords": [
+        "roblox",
+        "http",
+        "long",
+        "polling",
+        "realtime",
+        "real",
+        "time"
+    ],
+    "author": "Grid, Inc.",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/grid-rbx/rlp/issues"
+    },
+    "dependencies": {
+        "async-redis": "^2.0.0",
+        "express": "^4.17.1",
+        "helmet": "^4.6.0",
+        "redis": "^3.1.2",
+        "uuid": "^8.3.2"
+    },
+    "homepage": "https://github.com/grid-rbx/rlp#readme"
 }
