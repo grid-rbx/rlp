@@ -3,7 +3,7 @@ local Base64 = require(script:WaitForChild("Base"))
 Connection = {}
 Connection.__index = Connection
 
-function Connection.new(url, id)
+function Connection.__new(url, id)
 	local newConnection = {}
 	setmetatable(newConnection, Connection)
 
@@ -75,7 +75,7 @@ function Connection:on(event, handler)
 	self.handlers[event] = handler;
 end
 
-function Connection:Disconnect()
+function Connection:disconnect()
 	HttpService:RequestAsync({
 		Url = self.url.."/connection/"..self.id,
 		Method = "DELETE",

@@ -1,9 +1,7 @@
 local HttpService = game:GetService("HttpService")
-local connection = require(script:WaitForChild("Conn"));
+local connection = require(script:WaitForChild("Connection"));
 
-local robloxLongPolling = {}
-
-function robloxLongPolling.Connect(url, password)
+return function(url, password)
 	local connectionRequest = HttpService:RequestAsync({
 		Url = url.."/connection",
 		Method = "POST",
@@ -15,13 +13,11 @@ function robloxLongPolling.Connect(url, password)
 		})
 	})
 	local response = HttpService:JSONDecode(connectionRequest.Body);
-	
+
 	if response.success == true then
-		return connection.new(url, response.socketId);
+		return connection.__new(url, response.socketId);
 	else
 		print(connectionRequest.Body)
 		error("Connection failed")
 	end
 end
-
-return robloxLongPolling
