@@ -73,7 +73,7 @@ end)
 connection:send("return_greeting", "Hello!") -- Example on how to send messages.
 
 task.wait(30)
-connection:Disconnect()
+connection:disconnect()
 ```
 
 ## Contributing
