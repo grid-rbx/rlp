@@ -56,19 +56,19 @@ And download the Roblox module [here](https://github.com/grid-rbx/rlp/blob/maste
 ```lua
 local rlp = require(path.to.module)
 
-local connection = rlp.Connect("http://<address>:<port>", "")
+local connection = rlp("http://<address>:<port>", "")
 
 
-connection:on("greeting", function(message) -- This is an event fired in the above example, you can change this if you want into your own events.
+connection.on("greeting", function(message) -- This is an event fired in the above example, you can change this if you want into your own events.
     print("Recieved greeting: ", message)
 end)
 
-connection:on("new connection", function(id) -- This is an event fired in the above example, you can change this if you want into your own events.
-    print("new connection ", id)
+connection.on("new connection", function(id) -- This is an event fired in the above example, you can change this if you want into your own events.
+    print("New Connection: ", id)
 end)
 
-connection:on("disconnection", function(id) -- Fired if we for some reason get disconnected.
-    print("disconnection ", id)
+connection.on("disconnection", function(id) -- Fired if we for some reason get disconnected.
+    print("Disconnection: ", id)
 end)
 connection:send("return_greeting", "Hello!") -- Example on how to send messages.
 
